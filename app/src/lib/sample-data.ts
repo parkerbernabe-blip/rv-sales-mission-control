@@ -41,6 +41,22 @@ export type CustomerSampleRecord = {
   tasks: Array<{ title: string; due: string; priority: string }>;
 };
 
+export type OpportunitySampleRecord = {
+  id: string;
+  customer_name: string;
+  rv_name: string;
+  buying_score: number;
+  stage: string;
+  trade_in_status: string;
+  finance_status: string;
+  estimated_value: number;
+  assigned_salesperson: string;
+  last_contact: string;
+  next_action: string;
+  notes?: string;
+  created_at?: string;
+};
+
 export const sampleCustomers: CustomerSampleRecord[] = [
   {
     id: "cust-1",
@@ -100,6 +116,69 @@ export const sampleCustomers: CustomerSampleRecord[] = [
     tasks: [
       { title: "Prepare comparison sheet", due: "Friday • 2:30 PM", priority: "Low" },
     ],
+  },
+];
+
+export const sampleOpportunities: OpportunitySampleRecord[] = [
+  {
+    id: "opp-1",
+    customer_name: "Maya Thompson",
+    rv_name: "2026 Forest River Georgetown 34H",
+    buying_score: 92,
+    stage: "Negotiation",
+    trade_in_status: "Pending appraisal",
+    finance_status: "Pre-approval ready",
+    estimated_value: 124800,
+    assigned_salesperson: "Chris Alvarez",
+    last_contact: "Today • 2:30 PM",
+    next_action: "Send revised financing terms",
+    notes: "Customer is comparing solar and bunkhouse options before signing.",
+    created_at: "2026-07-10T14:20:00.000Z",
+  },
+  {
+    id: "opp-2",
+    customer_name: "Jordan Lee",
+    rv_name: "2026 Keystone Montana High Country",
+    buying_score: 87,
+    stage: "Finance review",
+    trade_in_status: "Trade-in approved",
+    finance_status: "Credit submitted",
+    estimated_value: 108150,
+    assigned_salesperson: "Mia Chen",
+    last_contact: "Yesterday • 4:10 PM",
+    next_action: "Finalize trade-in paperwork",
+    notes: "Needs delivery outside the city and wants a full walkthrough.",
+    created_at: "2026-07-08T09:15:00.000Z",
+  },
+  {
+    id: "opp-3",
+    customer_name: "Riley Gomez",
+    rv_name: "2025 Grand Design Reflection 315RL",
+    buying_score: 81,
+    stage: "Appraisal",
+    trade_in_status: "Awaiting photos",
+    finance_status: "Needs lender call",
+    estimated_value: 97400,
+    assigned_salesperson: "Jordan Patel",
+    last_contact: "2 days ago",
+    next_action: "Upload trade-in photos and follow up",
+    notes: "Family of four; interested in bunkhouse floorplans and a lower monthly payment.",
+    created_at: "2026-07-06T16:40:00.000Z",
+  },
+  {
+    id: "opp-4",
+    customer_name: "Alicia Brooks",
+    rv_name: "2025 Coachmen Leprechaun 320MP",
+    buying_score: 78,
+    stage: "Discovery",
+    trade_in_status: "No trade-in",
+    finance_status: "Consultation scheduled",
+    estimated_value: 89600,
+    assigned_salesperson: "Sage Martin",
+    last_contact: "Today • 9:45 AM",
+    next_action: "Review floorplan shortlist",
+    notes: "Customer is comparing weekend-use models and storage capacity.",
+    created_at: "2026-07-11T08:00:00.000Z",
   },
 ];
 
